@@ -64,6 +64,7 @@ function clearInput(){
   loginBtn.addEventListener("click", () => {
   if(checkAccount()) {
         location.href = "../home/home.html";
+        
   }
   });
 }
@@ -117,6 +118,8 @@ function validateSignup(e) {
   }
 }
 if(location.pathname == '/signup%20page/signup.html'){
+  console.log(item);
+  
 item.addEventListener("click", validateSignup);
 }
 
