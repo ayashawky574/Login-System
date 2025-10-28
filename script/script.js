@@ -74,7 +74,7 @@ if (signupBtn) {
    if(addUser()){
      finishPragraph.innerHTML ="success"
         finishPragraph.style.color = "green"
-    location.href = "/index.html";
+    location.href = "../index.html";
     clearInput()
    }
   });
@@ -82,7 +82,7 @@ if (signupBtn) {
 
  if (homeBtn) {
   homeBtn.addEventListener("click", () => {
-   location.href= "/index.html"
+   location.href= "../index.html"
   });
 }
 
