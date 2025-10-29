@@ -97,7 +97,11 @@ var validationInputs ={
 
 function validateSignup(e) {
   if (e.target.localName == "input") {
+    console.log(e.target);
+    
     var element = e.target;
+    console.log(element);
+    
     var regex = {
       nameInput: /^[a-z ]{6,20}$/,
       emailInput: /^[a-zA-z-_0-9]{5,20}@gmail.com$/,
@@ -106,7 +110,7 @@ function validateSignup(e) {
     var msg = element.parentElement.nextElementSibling;
     var isvalid; 
       function checkField(){
-           var text = e.target.value;
+           var text = element.value;
       isvalid = regex[element.id].test(text);
       if (isvalid) {
         msg.classList.add("d-none"); 
