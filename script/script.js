@@ -64,7 +64,7 @@ function clearInput(){
  if (loginBtn) {
   loginBtn.addEventListener("click", () => {
   if(checkAccount()) {
-        location.href = "../home/home.html";
+        location.href = "/Login-System/home/home.html";
         
   }
   });
@@ -75,7 +75,7 @@ if (signupBtn) {
    if(addUser()){
      finishPragraph.innerHTML ="success"
         finishPragraph.style.color = "green"
-    location.href = "../index.html";
+    location.href = "/Login-System/";
     clearInput()
    }
   });
@@ -83,7 +83,7 @@ if (signupBtn) {
 
  if (homeBtn) {
   homeBtn.addEventListener("click", () => {
-   location.href= "../index.html"
+   location.href= "/Login-System/"
   });
 }
 
@@ -125,7 +125,7 @@ function validateSignup(e) {
     
   }
 }
-if(location.pathname == '/signup%20page/signup.html'){
+if(location.pathname == '/Login-System/signup%20page/signup.html'){
   console.log(item);
   
 item.addEventListener("click", validateSignup);
@@ -161,7 +161,7 @@ emailMsg.classList.remove("d-none")
 }
 }
 
-if (location.pathname == '/home/home.html') {
+if (location.pathname == '/Login-System/home/home.html') {
 welcomeText.innerText ="welcome "+ localStorage.getItem("userName");
   
 }
