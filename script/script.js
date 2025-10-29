@@ -20,7 +20,7 @@ if(localStorage.getItem("users")!=null){
   users = JSON.parse(localStorage.getItem("users"))
 }
 var user ;
-// console.log(welcomeText.innerText);
+
 function addUser() {
   console.log(users);
     if(
@@ -48,6 +48,7 @@ function addUser() {
 });
   }
     } else {
+      
        finishPragraph.classList.remove("d-none")
       return false 
     }
