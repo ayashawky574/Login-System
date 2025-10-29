@@ -125,9 +125,7 @@ function validateSignup(e) {
     
   }
 }
-if(location.pathname == '/Login-System/signup%20page/signup.html'){
-  console.log(item);
-  
+if(location.pathname.includes("signup")){
 item.addEventListener("click", validateSignup);
 }
 
