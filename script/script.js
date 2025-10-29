@@ -101,12 +101,12 @@ function validateSignup(e) {
     var regex = {
       nameInput: /^[a-z ]{6,20}$/,
       emailInput: /^[a-zA-z-_0-9]{5,20}@gmail.com$/,
-      passInput: /^[a-zA-Z0-9_]{2,20}.{3,10}$/,
+      passInput:  /^[a-zA-Z0-9_]{5,20}$/,
     };
     var msg = element.parentElement.nextElementSibling;
-    var isvalid;
-    element.addEventListener("input", function () {
-      var text = e.target.value;
+    var isvalid; 
+      function checkField(){
+           var text = e.target.value;
       isvalid = regex[element.id].test(text);
       if (isvalid) {
         msg.classList.add("d-none"); 
@@ -115,7 +115,10 @@ function validateSignup(e) {
         msg.classList.remove("d-none");
         validationInputs[element.id] =false  
       }
-    });
+      }
+    element.addEventListener("input" , checkField)
+    element.addEventListener("blur" , checkField)
+    
   }
 }
 if(location.pathname == '/signup%20page/signup.html'){
@@ -130,7 +133,7 @@ function FindRepeatedEmail(){
          return user.email=== emailInput.value;    
         }
         )
-        console.log(isRepeated);
+     
     return isRepeated
 }
 function checkAccount(){
